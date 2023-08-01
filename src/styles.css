@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 .bshadow {
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,12 +7,17 @@
     opacity: .5;
   }
 
-  .card{
-    height: 300px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  .card-dash{
+    height: 400px;
+    display: flex;
+    background-color: antiquewhite;
+  }
+
+  .card-body-dash h1{
+    padding: 3%;
+  }
+  .card-body-dash button{
+    margin-left: 35%;
   }
 
   .card-body img{

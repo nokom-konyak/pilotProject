@@ -1,8 +1,9 @@
-<div class="container-fluid">
-    <div class="row">
+<div class="container-fluid" style="width: 100%; height: 450px; overflow: hidden; background-color: cadetblue;">
+    <div class="row" style="padding-top: 3%; padding-bottom: 3%;">
         <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
+            <div class="card-dash">
+                <div class="card-body-dash">
+                    <img src="/assets/gears.png" alt="image" class="card-img-top card-img" style="height: 60%; width: 70%; padding-left: 20%;">
                     <h1>TRAINING AND CERTIFICATION</h1>
                     <button class="btn btn-primary" (click)="showContent()" *ngIf="!IsCourseShow">proceed</button>
                     <button class="btn btn-primary" (click)="removeContent()" *ngIf="IsCourseShow">back</button>
@@ -11,26 +12,29 @@
         </div>
 
         <div class="col-md-4" *ngIf="IsCourseShow">
-            <div class="card">
-                <div class="card-body">
-                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img">
-                    <h1>Content 2</h1>
+            <div class="card-dash background_image">
+                <div class="card-body-dash" style="padding-top: 20%; padding-left: 5%; opacity: 1;">
+                    <h3 style="opacity: 1;">IT Development Course</h3>
+                    <h5 style="opacity: 1;">Training sessions are vital to the learning process, but they are only one 
+                        step in the learning process and this should never be forgotten, "BEST OF LUCK"</h5>
+                    <button class="btn btn-primary" (click)="explore()" style="opacity: 1;">Explore</button>
                 </div>
             </div>
         </div>
         <div class="col-md-4" *ngIf="!IsCourseShow">
-            <div class="card">
-                <div class="card-body">
-                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img">
-                    <h1>Content 3</h1>
+            <div class="card-dash">
+                <div class="card-body-dash" style="padding: 10%;">
+                    <h1>Pilot Project</h1><br>
+                    <p style="padding-left: 5px;">This Project is done as a Pilot Project for the Training session of Full Stack
+                        Development with Angular Under the Guidence of <b>Deepa B V </b>
+                    </p>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img">
-                    <h1>Content 4</h1>
+            <div class="card-dash">
+                <div class="card-body-dash">
+                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img" style="padding-top: 13%;">
                 </div>
             </div>
         </div>

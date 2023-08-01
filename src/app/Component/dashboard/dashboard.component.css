@@ -1,0 +1,13 @@
+.background_image{
+    background-image: url('/assets/learning.jpg');
+    background-size: cover;
+    background-repeat: none;
+    background-size: 100% 100%;
+}
+
+.background_image::after{
+    
+    opacity: 0.5;
+    z-index: -1;
+}
+
