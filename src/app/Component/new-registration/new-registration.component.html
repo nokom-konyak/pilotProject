@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- First Column -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="{{Course.courseImage}}" class="card-img-top">
+                    <h3 class="card-title">{{Course.courseName}}</h3>
+                    <h5 class="card-text">{{Course.courseDesc}}</h5>
+                    <p class="card-text">Start date Time : {{Course.startTime|date: 'yyyy-MMM-dd HH:mm'}}<br>
+                    End date Time : {{Course.endTime|date: 'yyyy-MMM-dd HH:mm'}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <!-- Generate QR Code -->
+                <!-- <div>
+                    <h2>QR Code Generator</h2>
+                    <input [(ngModel)]="mobileNumber" placeholder="Enter Mobile Number" />
+                    <ngx-qrcode [qrc-value]="mobileNumber"></ngx-qrcode>
+                </div> -->
+                <!--Scan QR Code -->
+                <!-- <div>
+                    <h2>QR Code Scanner</h2>
+                    <zxing-scanner [formats]="['QR_CODE']" (scanSuccess)="onScanSuccess($event)"></zxing-scanner>
+                </div>
+                <div *ngIf="scannedMobileNumber">
+                    <h3>Scanned Mobile Number: {{ scannedMobileNumber }}</h3>
+                </div>  -->
+
+                <ngx-qrcode [elementType]="elementType" [errorCorrectionLevel]="correctionLevel" [value]="value"
+                cssClass="bshadow"></ngx-qrcode>
+            </div>
+        </div>
+    </div>
+</div>

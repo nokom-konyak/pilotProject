@@ -1,0 +1,22 @@
+<div class="container-fluid" style="height: 100vh-200px;">
+    <div class="row">
+        <!-- First Column -->
+        <div class="col-md-4" *ngFor="let data of AllCourses">
+            <div class="card">
+                <div class="card-body" >
+                    <img src="{{data.courseImage}}" class="card-img-top card-img">
+                    <h3 class="card-title">{{data.courseName}}</h3>
+                    <h5 class="card-text">{{data.courseDesc}}</h5>
+                    <p class="card-text">Start date Time : {{data.startTime|date: 'yyyy-MMM-dd HH:mm'}}<br>
+                    End date Time : {{data.endTime|date: 'yyyy-MMM-dd HH:mm'}}</p>
+
+                    <div><button class="btn btn-primary" (click)="CourseDetails(data.courseId)">Course Details</button></div>
+                    
+                    
+                    <!-- <button class="btn btn-danger" routerLink="/course-detail/{{this.data.courseId}}">
+                         Course Details <i class="fa-solid fa-file-pen"></i></button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

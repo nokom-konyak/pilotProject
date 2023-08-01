@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <h2>New Course Insertion Page</h2>
+    <form [formGroup]="NewCourseForm" class="was-validate" (ngSubmit)="NewCourse()" >
+        <table class="table table-hover table-bordered">
+            <tbody>
+                <tr class="form-group">
+                    <td class="form-control">Enter Course Name: </td>
+                    <td><input type="text" class="form-control" formControlName="name" required /> </td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-control">Upload Images : </td>
+                    <td><input type="file" (change)="ImageUpload($event)" formControlName="image"
+                        multiple style="height: 100%;" accept="image/*"> </td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-control">Enter Course Description : </td>
+                    <td><input type="text" class="form-control" formControlName="desc" required /> </td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-control">Start Date Time: </td>
+                    <td><input type="datetime" class="form-control" formControlName="start" required /></td>
+                </tr>
+                <tr class="form-group">
+                    <td class="form-control">End Date Time: </td>
+                    <td><input type="datetime" class="form-control" formControlName="end" required /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="New Course" /></td>
+                    <td><input type="reset" /> </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
+
+

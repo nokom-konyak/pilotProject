@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h1>TRAINING AND CERTIFICATION</h1>
+                    <button class="btn btn-primary" (click)="showContent()" *ngIf="!IsCourseShow">proceed</button>
+                    <button class="btn btn-primary" (click)="removeContent()" *ngIf="IsCourseShow">back</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" *ngIf="IsCourseShow">
+            <div class="card">
+                <div class="card-body">
+                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img">
+                    <h1>Content 2</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4" *ngIf="!IsCourseShow">
+            <div class="card">
+                <div class="card-body">
+                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img">
+                    <h1>Content 3</h1>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <img src="/assets/robot.jpg" alt="image" class="card-img-top card-img">
+                    <h1>Content 4</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+.bshadow {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(5px 5px 5px #222222);
+    opacity: .5;
+  }
+
+  .card{
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .card-body img{
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+    height:40%;
+  }
+  .card-body h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-body div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
