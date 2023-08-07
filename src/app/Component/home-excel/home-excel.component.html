@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <table border="2" style="width: 300%;">
+        <tr>
+            <th>SI No.</th>
+            <th>Program Name</th>
+            <th>Program Type</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Time</th>
+            <th>Duration (Day)</th>
+            <th>Total Days</th>
+            <th>Total Duration</th>
+            <th>Program Description</th>
+            <th>Objective</th>
+            <th>Target Audience</th>
+            <th>Software Requirements</th>
+            <th>Technical PreRequities</th>
+            <th>Categories</th>
+            <th>Enrolment Link</th>
+        </tr>
+        <tr *ngFor="let c of AllCourses">
+            <td>{{c.courseId}}</td>
+            <td>{{c.courseName}}</td>
+            <td>{{c.courseType}}</td>
+            <td>{{c.startDate}}</td>
+            <td>{{c.endDate}}</td>
+            <td>{{c.time}}</td>
+            <td>{{c.durationPerDay}}</td>
+            <td>{{c.total_duration}}</td>
+            <td>{{c.total_days}}</td>
+            <td>{{c.courseDesc}}</td>
+            <td>{{c.topics}}</td>
+            <td>{{c.targetAudience}}</td>
+            <td>{{c.softwareRequirements}}</td>
+            <td>{{c.prerequites}}</td>
+            <td>{{c.category}}</td>
+            <td><a href={{c.enrollmentLink}}>{{c.enrollmentLink}}</a></td>
+        </tr>
+    </table>
+</div>

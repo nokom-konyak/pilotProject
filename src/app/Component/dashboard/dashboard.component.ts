@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
   }
 
   explore(){
-    this._router.navigate(['Home']);
+    this._router.navigate(['Home_Excel']);
   }
 
 }

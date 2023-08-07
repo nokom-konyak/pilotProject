@@ -13,6 +13,7 @@ import { InsertCourseComponent } from './Component/insert-course/insert-course.c
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { FooterComponent } from './Component/footer/footer.component';
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import { HomeExcelComponent } from './Component/home-excel/home-excel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import { DashboardComponent } from './Component/dashboard/dashboard.component';
     HeaderComponent,
     InsertCourseComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    HomeExcelComponent
   ],
   imports: [
     BrowserModule,

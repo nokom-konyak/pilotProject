@@ -5,6 +5,7 @@ import { CourseDetailsComponent } from './Component/course-details/course-detail
 import { NewRegistrationComponent } from './Component/new-registration/new-registration.component';
 import { PagenotfoundComponent } from './Component/pagenotfound/pagenotfound.component';
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import { HomeExcelComponent } from './Component/home-excel/home-excel.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'Dashboard',pathMatch:'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path:'course-detail',component:CourseDetailsComponent},
   {path:'course-detail/:id',component:CourseDetailsComponent},
   {path:'Registration',component:NewRegistrationComponent},
+  {path:'Home_Excel',component:HomeExcelComponent},
   {path:'**',component:PagenotfoundComponent}
 ];
 
