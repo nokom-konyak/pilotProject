@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <table border="2" style="width: 300%;">
-        <tr>
+        <tr style="text-align: center;">
             <th>SI No.</th>
             <th>Program Name</th>
             <th>Program Type</th>
@@ -16,10 +16,9 @@
             <th>Software Requirements</th>
             <th>Technical PreRequities</th>
             <th>Categories</th>
-            <th>Enrolment Link</th>
         </tr>
-        <tr *ngFor="let c of AllCourses">
-            <td>{{c.courseId}}</td>
+        <tr *ngFor="let c of AllCourses" style="text-align: center;">
+            <td><b>{{c.courseId}}</b></td>
             <td>{{c.courseName}}</td>
             <td>{{c.courseType}}</td>
             <td>{{c.startDate}}</td>
@@ -34,7 +33,8 @@
             <td>{{c.softwareRequirements}}</td>
             <td>{{c.prerequites}}</td>
             <td>{{c.category}}</td>
-            <td><a href={{c.enrollmentLink}}>{{c.enrollmentLink}}</a></td>
+            <td><button class="btn btn-primary" (click)="Register(c)">Link to Register</button></td>
+            <!-- <td><a href={{c.enrollmentLink}} target="_blank">Click here to join the meeting</a></td> -->
         </tr>
     </table>
 </div>

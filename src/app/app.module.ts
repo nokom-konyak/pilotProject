@@ -14,6 +14,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { FooterComponent } from './Component/footer/footer.component';
 import { DashboardComponent } from './Component/dashboard/dashboard.component';
 import { HomeExcelComponent } from './Component/home-excel/home-excel.component';
+import { RegisterExcelComponent } from './Component/register-excel/register-excel.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { HomeExcelComponent } from './Component/home-excel/home-excel.component'
     InsertCourseComponent,
     FooterComponent,
     DashboardComponent,
-    HomeExcelComponent
+    HomeExcelComponent,
+    RegisterExcelComponent
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,14 @@ export class ApiServiceService {
     )
   }
 
+  ShowAllCourseExcel():Observable<any>{
+    return this._httpClient.get<any>("http://localhost:5093/api/Pilot_Project_Excel/GetAllCourse").pipe(
+      map((res:any)=>{
+        return res;
+      })
+    )
+  }
+
   ShowCourseById(id:number):Observable<any>{
     return this._httpClient.get<any>("http://localhost:5093/api/Pilot_project/GetCourseById?id="+id).pipe(
       map((res:any)=>{

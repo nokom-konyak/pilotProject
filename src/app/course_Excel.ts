@@ -1,3 +1,5 @@
+import { Url } from "url";
+
 export class Course_Excel {
     courseId!:number;
     courseName!:string;
@@ -14,5 +16,5 @@ export class Course_Excel {
     softwareRequirements!:string;
     prerequites!:string;
     category!:string;
-    enrollmentLink!:string;
+    //enrollmentLink!:string;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiServiceService } from 'src/app/Service/api-service.service';
 import { Course_Excel } from 'src/app/course_Excel';
 
@@ -9,15 +10,17 @@ import { Course_Excel } from 'src/app/course_Excel';
 })
 export class HomeExcelComponent implements OnInit {
   AllCourses!:Course_Excel[];
+  newUserRegister: any;
+  EmployeeData: any;
 
-  constructor(private _apiService:ApiServiceService) { }
+  constructor(private _apiService:ApiServiceService,private _router:Router) { }
 
   ngOnInit(): void {
     this.getAllCourseDetails();
   }
 
   getAllCourseDetails(){
-    this._apiService.ShowAllCourse().subscribe({
+    this._apiService.ShowAllCourseExcel().subscribe({
       next:(res)=>{
         console.log(res);
         this.AllCourses=res;
@@ -26,5 +29,10 @@ export class HomeExcelComponent implements OnInit {
         alert("Some Error Occured!!!");
       }
     })
+  }
+
+  Register(course:any) {
+    sessionStorage.setItem("COURSE",JSON.stringify(course));
+    this._router.navigate(['Register_Excel'])
   }
 }

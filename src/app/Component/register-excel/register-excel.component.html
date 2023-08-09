@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <h1 style="text-align: center;">User Registration Page</h1>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <!-- First Column -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body" >
+                    <h3 class="card-title">{{course.courseName}} {{course.courseType}}</h3>
+                    <p class="card-text">Start date :<b> {{course.startDate|date: 'yyyy-MMM-dd HH:mm'}}</b><br>
+                    End date Time :<b> {{course.endDate|date: 'yyyy-MMM-dd HH:mm'}}</b></p>
+                    <p class="card-text">Time : <b>{{course.time}}</b> <br><br>
+                        <b>PreRequestics</b> :{{course.prerequites}}</p>
+                    <div>
+                        <input type="text" placeholder="Enter Email Id to Register" [(ngModel)]="email"/> 
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" (click)="Register(course.courseId)">Register</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4" *ngIf="isValidUser">
+            <table>
+                <tr>
+                    <td>Employee ID :</td>
+                    <td>{{EmployeeData.EmployeeId}}</td>
+                </tr>
+                <tr>
+                    <td>Employee Name :</td>
+                    <td>{{EmployeeData.EmployeeName}}</td>
+                </tr>
+                <tr>
+                    <td>Mobile Number :</td>
+                    <td>{{EmployeeData.MobileNo}}</td>
+                </tr>
+                <tr>
+                    <td>Email ID :</td>
+                    <td>{{EmployeeData.EmailId}}</td>
+                </tr>
+                <tr>
+                    <td>Employee Location :</td>
+                    <td>{{EmployeeData.EmployeeLocation}}</td>
+                </tr>
+                <tr>
+                    <td>Manager Name :</td>
+                    <td>{{EmployeeData.ManagerName}}</td>
+                </tr>
+                <tr rowspan="2">
+                    <td colspan="2">{{Regis_Status}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
